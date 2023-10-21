@@ -7,6 +7,7 @@ import { loggedOutUser, selectUser } from '../Store.js/auth/userSlice';
 import Brands from './Brands';
 import { setCart } from '../Store.js/cart/cartSlice';
 import { searchProduct } from '../Store.js/Product/productApi';
+import LogoElement from './Logo';
 
 export default function Navbar({ openSideBar, setOpenSideBar }) {
     const [brandsVisible, setBrandsVisible] = useState(false);
@@ -52,7 +53,7 @@ export default function Navbar({ openSideBar, setOpenSideBar }) {
                 <h2 className='text-3xl order-2'>
                     <button onClick={() => setOpenSideBar(true)}> <FontAwesomeIcon icon={faBars} style={{ color: "#ccd5ae" }} /></button>
                 </h2>
-                <Link to='/'><span className='font-semibold md:order-2 text-lg text-[#4b3825]'>MERN STACK</span></Link>
+                <Link to='/'><div className='font-semibold md:order-2 text-lg text-[#4b3825]'><LogoElement /></div></Link>
             </div>
 
             <div className='relative'>
